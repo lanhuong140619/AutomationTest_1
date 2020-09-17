@@ -1,0 +1,115 @@
+{
+  "id": "ddf263ea-aa81-4530-a829-d9990d084a0b",
+  "version": "2.0",
+  "name": "Auto_",
+  "url": "https://itmscoaching.herokuapp.com",
+  "tests": [{
+    "id": "9ba43b9b-5a8e-46e9-a85d-00eb012541d7",
+    "name": "T2.1",
+    "commands": [{
+      "id": "cdb70801-2347-4924-8db4-d292c99c309e",
+      "comment": "",
+      "command": "open",
+      "target": "/switch-window?fbclid=IwAR0KWJiJjI8tTbjlH-43tzDF8FT_JS40mans8K917HVS0uQmVL_Q0p-x2Ig",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "800f63ba-b491-4790-9637-7fd828dbd3b4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "393c5e96-87d9-4913-96c0-a69b34b92cf6",
+      "comment": "",
+      "command": "click",
+      "target": "id=new-tab-button",
+      "targets": [
+        ["id=new-tab-button", "id"],
+        ["css=#new-tab-button", "css:finder"],
+        ["xpath=//button[@id='new-tab-button']", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Open new tab')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win5180",
+      "windowTimeout": 2000
+    }, {
+      "id": "daf2712f-d7eb-4741-b787-9b3f23f10509",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aaef9c3e-a60b-4605-a2f5-f8f054a9cde3",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5180}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ea6081d-6ef6-403d-825b-67c90bfefecd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Autocomplete",
+      "targets": [
+        ["linkText=Autocomplete", "linkText"],
+        ["css=li:nth-child(5) > .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Autocomplete')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/autocomplete')])[2]", "xpath:href"],
+        ["xpath=//div/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b83fd990-c099-4994-8895-2e3e10d0a580",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9067eaba-a39c-4377-aa05-b17a47619a23",
+      "comment": "",
+      "command": "click",
+      "target": "id=alert-button",
+      "targets": [
+        ["id=alert-button", "id"],
+        ["css=#alert-button", "css:finder"],
+        ["xpath=//button[@id='alert-button']", "xpath:attributes"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Open alert')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c0740a2-0985-44d1-a61d-3477419c17b8",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "This is a test alert!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ed2fec3-4872-481f-b0fa-991afccb31a2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "FORMY\\nForm\\nComponents\\n\\nSwitch Window\\nOpen new tab\\nOpen alert"
+    }]
+  }],
+  "suites": [{
+    "id": "1a6c33b8-caed-4c58-8bce-6de408e1fe67",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9ba43b9b-5a8e-46e9-a85d-00eb012541d7"]
+  }],
+  "urls": ["https://itmscoaching.herokuapp.com/"],
+  "plugins": []
+}

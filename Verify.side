@@ -1,0 +1,85 @@
+{
+  "id": "da718b1a-114a-49b3-8359-c6b03be5521c",
+  "version": "2.0",
+  "name": "Auto_S1",
+  "url": "http://automationpractice.com",
+  "tests": [{
+    "id": "2ff8635d-49ca-40ce-9901-a39d7c60a7c3",
+    "name": "T_3",
+    "commands": [{
+      "id": "516a24c7-982d-437f-b0c1-79500d211054",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c0ed856-258f-48b0-ad49-8f099dd57ee5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae64ef2b-6cf3-499b-986e-ada4e7380149",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign in",
+      "targets": [
+        ["linkText=Sign in", "linkText"],
+        ["css=.login", "css:finder"],
+        ["xpath=//a[contains(text(),'Sign in')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div[2]/div/div/nav/div/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://automationpractice.com/index.php?controller=my-account']", "xpath:href"],
+        ["xpath=//nav/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign in')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "09581e74-e429-422f-8cee-5aa62a06bf70",
+      "comment": "",
+      "command": "click",
+      "target": "css=#SubmitLogin > span",
+      "targets": [
+        ["css=#SubmitLogin > span", "css:finder"],
+        ["xpath=//button[@id='SubmitLogin']/span", "xpath:idRelative"],
+        ["xpath=//p[2]/button/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed4d72f9-e373-4783-a6f5-39e5104ed62d",
+      "comment": "",
+      "command": "click",
+      "target": "css=ol > li",
+      "targets": [
+        ["css=ol > li", "css:finder"],
+        ["xpath=//div[@id='center_column']/div/ol/li", "xpath:idRelative"],
+        ["xpath=//ol/li", "xpath:position"],
+        ["xpath=//li[contains(.,'An email address required.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d59df18c-157c-451c-a7e5-f8a4bb068fbf",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=ol > li",
+      "targets": [
+        ["css=ol > li", "css:finder"],
+        ["xpath=//div[@id='center_column']/div/ol/li", "xpath:idRelative"],
+        ["xpath=//ol/li", "xpath:position"],
+        ["xpath=//li[contains(.,'An email address required.')]", "xpath:innerText"]
+      ],
+      "value": "An email address required."
+    }]
+  }],
+  "suites": [{
+    "id": "492586ee-2753-4b69-b192-e6b3abb6397b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2ff8635d-49ca-40ce-9901-a39d7c60a7c3"]
+  }],
+  "urls": ["http://automationpractice.com/"],
+  "plugins": []
+}
